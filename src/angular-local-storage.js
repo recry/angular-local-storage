@@ -308,7 +308,7 @@ angularLocalStorage.provider('localStorageService', function() {
           expiry = "; expires=" + expiryDate.toGMTString();
         }
         if (!!key) {
-          var cookiePath = "; path=" + cookie.path;
+          var cookiePath = !!cookie.path ? "; path=" + cookie.path : "";
           if(cookie.domain){
             cookieDomain = "; domain=" + cookie.domain;
           }
